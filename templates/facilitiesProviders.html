@@ -38,7 +38,7 @@
               <select id="provID" name="provID">
                 <option value = ""></option>
                 {% for p in pid %}
-                  <option value="{{ p[0] }}">{{ p[0] }}</option>
+                  <option value="{{ p[0] }}">{{ p[0] }}: {{ p[1] }} {{ p[2] }}</option>
                 {% endfor %}
               </select>
             </li><br>
@@ -49,7 +49,7 @@
               <select id="facilityID" name="facilityID">
                 <option value = ""></option>
                 {% for f in fid %}
-                  <option value="{{ f[0] }}">{{ f[0] }}</option>
+                  <option value="{{ f[0] }}">{{ f[0] }}: {{ f[1] }}</option>
                 {% endfor %}
               </select>
             </li><br>
@@ -76,14 +76,14 @@
               <td>
                 <select id="provID" name="provID">
                   {% for p in pid %}
-                    <option value="{{ p[0] }}">{{ p[0] }}</option>
+                    <option value="{{ p[0] }}">{{ p[0] }}: {{ p[1] }} {{ p[2] }}</option>
                   {% endfor %}
                 </select>
               </td>
               <td>
                 <select id="facilityID" name="facilityID">
                   {% for f in fid %}
-                    <option value="{{ f[0] }}">{{ f[0] }}</option>
+                    <option value="{{ f[0] }}">{{ f[0] }}: {{ f[1] }}</option>
                   {% endfor %}
                 </select>
               </td>

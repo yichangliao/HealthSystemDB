@@ -55,8 +55,18 @@ def index():
         else:
           # Return results for display on the page
           results = execute_query(db_connection, query)
+
+          query = "SELECT * FROM Patients"
+          patients = execute_query(db_connection, query).fetchall()
+          
+          query = "SELECT * FROM PatientsProviders"
+          patProv = execute_query(db_connection, query).fetchall()
+          
+          query = "SELECT * FROM ProvidersFacilities"
+          provFac = execute_query(db_connection, query).fetchall()
+
           claims = results.fetchall()
-          return render_template('index.html', claims=claims)
+          return render_template('index.html', claims=claims, patients=patients, patProv=patProv, provFac=provFac)
 
       # update claim information
       elif 'edit' in request.form:
@@ -346,7 +356,11 @@ def patientsProviders():
           # Return results for display on the page
           results = execute_query(db_connection, query)
           patProvs = results.fetchall()
-          return render_template('patientsProviders.html', rows=patProvs)
+          patQuery = "SELECT * FROM Patients"
+          provQuery = "SELECT * FROM Providers"
+          patResult = execute_query(db_connection, patQuery).fetchall()
+          provResult = execute_query(db_connection, provQuery).fetchall()
+          return render_template('patientsProviders.html', rows=patProvs, patients = patResult, providers = provResult)
 
       # delete patientProvider record
       elif "delete" in request.form:
@@ -363,8 +377,8 @@ def facilitiesProviders():
   # read and show current data of the table 
   if request.method == 'GET':
     query = 'SELECT * FROM ProvidersFacilities'
-    pQuery = 'SELECT provID FROM Providers'
-    fQuery = 'SELECT facilityID from Facilities'
+    pQuery = 'SELECT * FROM Providers'
+    fQuery = 'SELECT * from Facilities'
     result = execute_query(db_connection, query).fetchall()
     pResult = execute_query(db_connection, pQuery).fetchall()
     fResult = execute_query(db_connection, fQuery).fetchall()
@@ -405,8 +419,8 @@ def facilitiesProviders():
         return redirect('/facilitiesProviders')
       else:
         query += conditionString(requestForm)
-        pQuery = 'SELECT provID FROM Providers'
-        fQuery = 'SELECT facilityID from Facilities'
+        pQuery = 'SELECT * FROM Providers'
+        fQuery = 'SELECT * from Facilities'
         result = execute_query(db_connection, query).fetchall()
         pResult = execute_query(db_connection, pQuery).fetchall()
         fResult = execute_query(db_connection, fQuery).fetchall()

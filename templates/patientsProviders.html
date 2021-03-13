@@ -38,7 +38,7 @@
               <select id="patientID" name="patientID">
                 <option value=""></option>
                 {% for patient in patients %}
-                  <option value="{{patient[0]}}">{{patient[0]}}</option>
+                  <option value="{{patient[0]}}">{{patient[0]}}: {{patient[1]}} {{patient[2]}}</option>
                 {% endfor %}
               </select>
             </li><br>
@@ -49,7 +49,7 @@
               <select id="provID" name="provID">
                 <option value=""></option>
                 {% for provider in providers %}
-                  <option value="{{provider[0]}}">{{provider[0]}}</option>
+                  <option value="{{provider[0]}}">{{provider[0]}}: {{provider[1]}} {{provider[2]}}</option>
                 {% endfor %}
               </select>
             </li><br>
@@ -77,14 +77,14 @@
               <td>
                 <select id="patientID" name="patientID">
                   {% for patient in patients %}
-                    <option value="{{patient[0]}}">{{patient[0]}}</option>
+                    <option value="{{patient[0]}}">{{patient[0]}}: {{patient[1]}} {{patient[2]}}</option>
                   {% endfor %}
                 </select>
               </td>
               <td>
                 <select id="provID" name="provID">
                   {% for provider in providers %}
-                    <option value="{{provider[0]}}">{{provider[0]}}</option>
+                    <option value="{{provider[0]}}">{{provider[0]}}: {{provider[1]}} {{provider[2]}}</option>
                   {% endfor %}
                 </select>
               </td>
