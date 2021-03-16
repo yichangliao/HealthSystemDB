@@ -3,16 +3,7 @@ Team:\
 Yi Chang Liao\
 Cassandra Olsen
 
-* Project Outline:
-  - Alpha Health System’s (insurance company) is an insurance compathat services approximately 5,000 patients with 100,000 claims. There are 500 providers and 40 facilities within the network.
+* Project Outline:\
+Alpha Health System’s (insurance company) is an insurance compathat services approximately 5,000 patients with 100,000 claims. There are 500 providers and 40 facilities within the network.
 
-  - Alpha Health System’s customer service department employs people who need quick access to various information while on phone calls. A (realistically internal) database driven website would make member(patient), claim, provider(doctor), and facility(clinic/hospital) information available to the customer service representatives for better customer service. This database will house information for Patient Claims Received by Providers and Facilities.
-
-* ERD
-
-* Schema
-
-* Reference:
----
-+ [Flask docs](https://flask.palletsprojects.com/en/1.1.x/)
-+ [Flask project example](https://github.com/pallets/flask/tree/1.1.2/examples/tutorial)
+Alpha Health System’s customer service department employs people who need quick access to various information while on phone calls. A (realistically internal) database driven website would make member(patient), claim, provider(doctor), and facility(clinic/hospital) information available to the customer service representatives for better customer service. This database will house information for Patient Claims Received by Providers and Facilities.
