@@ -1,71 +1,18 @@
-# CS340 html interface design
+# Health System Database
+## Team:
+Yi Chang Liao
+Cassandra Olsen
 
-Setup on local computer
----
-git project
-```
-git clone https://github.com/yichangliao/cs340project.git
-```
-run python virtual
-```
-# Linux and Mac
-python3 -m venv venv
+* Project Outline:
+Alpha Health System’s (insurance company) is an insurance compathat services approximately 5,000 patients with 100,000 claims. There are 500 providers and 40 facilities within the network.
 
-# Windows Command Prompt
-python -m venv venv
-```
-activate virtual
-```
-# Linux and Mac
-source venv/bin/activate
+Alpha Health System’s customer service department employs people who need quick access to various information while on phone calls. A (realistically internal) database driven website would make member(patient), claim, provider(doctor), and facility(clinic/hospital) information available to the customer service representatives for better customer service. This database will house information for Patient Claims Received by Providers and Facilities.
 
-# Windows Command Prompt
-venv/Scripts/activate.bat
-```
-install project package
-```
-pip3 install --upgrade pip
-pip install -r requirements.txt
-```
-Run local project
----
-```
-python3 app.py
-```
-Run on flip
----
-```
-gunicorn -b 0.0.0.0:{any_valid_port} -D app:app
-```
-kill gunicorn
-```
-pkill -u {your_user_name} gunicorn
-```
-Collaboration by VScode and Github(after setup on local computer)
----
-first update all files from Github
-```
-git pull origin master
-```
-if just want to add other files to project
-```
-git add .
-git commit -m '{comment or description}'
-git push origin master
-```
-if try to modify files
-```
-git checkout -b {name of the branch}
-```
-start editing files...
+* ERD
 
-once done, push branch to github for comparison and merge
-```
-git push -u origin {name of the branch}
-```
-Usefull link
+* Schema
+
+* Reference:
 ---
-+ [TA's github 01 shown on Piazza](https://github.com/gkochera/CS340-demo-flask-app)
-+ [TA's github 02 shown on Piazza](https://github.com/knightsamar/CS340_starter_flask_app)
 + [flask docs](https://flask.palletsprojects.com/en/1.1.x/)
 + [flask project example](https://github.com/pallets/flask/tree/1.1.2/examples/tutorial)
