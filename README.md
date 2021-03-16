@@ -14,5 +14,5 @@ Cassandra Olsen
 
 * Reference:
 ---
-+ [flask docs](https://flask.palletsprojects.com/en/1.1.x/)
-+ [flask project example](https://github.com/pallets/flask/tree/1.1.2/examples/tutorial)
++ [Flask docs](https://flask.palletsprojects.com/en/1.1.x/)
++ [Flask project example](https://github.com/pallets/flask/tree/1.1.2/examples/tutorial)
