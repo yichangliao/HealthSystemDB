@@ -1,6 +1,6 @@
 # Health System Database
-Team:
-Yi Chang Liao
+Team:\
+Yi Chang Liao\
 Cassandra Olsen
 
 * Project Outline:
