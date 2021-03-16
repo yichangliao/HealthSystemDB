@@ -1,7 +1,7 @@
 # Health System Database
-## Team:
-Yi Chang Liao
-Cassandra Olsen
+### Team:
+### Yi Chang Liao
+### Cassandra Olsen
 
 * Project Outline:
   - Alpha Health System’s (insurance company) is an insurance compathat services approximately 5,000 patients with 100,000 claims. There are 500 providers and 40 facilities within the network.
